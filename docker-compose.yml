@@ -1,0 +1,13 @@
+version: "3.0"
+services:
+
+  ws-meta-ui:
+    image: ${REPO}:ws-meta-ui-${TAG}
+    build:
+      context: ws-meta-ui
+    env_file:
+      - .env
+    volumes:
+      - ./ws-meta-ui:/app
+    ports:
+      - "4200:4200"
